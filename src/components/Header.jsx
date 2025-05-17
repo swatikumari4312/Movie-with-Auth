@@ -9,6 +9,7 @@ import {
 } from "react-icons/hi2";
 import { HiPlus, HiDotsVertical } from "react-icons/hi";
 import HeaderList from "./HeaderList";
+import { UserButton } from "@clerk/clerk-react";
 
 function Header() {
   const [toggle, setToggle] = useState(false);
@@ -74,10 +75,9 @@ function Header() {
           </div>
         </div>
       </div>
-      <img
-        src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
-        className="w-[40px] rounded-full"
-      />
+      <div className="w-[40px] rounded-full ">
+        <UserButton />
+      </div>
     </div>
   );
 }
