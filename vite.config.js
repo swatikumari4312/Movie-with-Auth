@@ -6,7 +6,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0', // 👈 This is the fix
-    port: 5173       // (optional) you can use any available port
+    host: '0.0.0.0',
+    port: 5173,
+    allowedHosts: ['movie-with-auth.onrender.com']
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: 5173
   }
 })
